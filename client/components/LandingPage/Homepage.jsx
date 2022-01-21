@@ -18,8 +18,8 @@ const Homepage = () => {
     <h1 className='title'>Apply.io</h1>
       {login ? <Login /> : <></>}
       <div className='buttons'>
-        <Buttons text={'Log In'} clickFn={clickLogin}/>
-        <Buttons text={'Sign Up'} /> 
+        <button className='btn' onClick={() => clickLogin()}>Log In</button>
+        <button className='btn'>Sign Up</button>
       </div>
   </div>
   )

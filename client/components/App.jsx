@@ -9,8 +9,8 @@ const App = () => {
     <AuthProvider>
       <h1>CommonApp</h1>
       <AuthTesting />
-      {/* <Homepage /> */}
-      <CreateProfile />
+      <Homepage />
+      {/* <CreateProfile /> */}
     </AuthProvider>
   )
 }
