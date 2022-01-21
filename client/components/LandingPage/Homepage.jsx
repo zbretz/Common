@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import Buttons from '../Buttons.jsx';
 import Login from './Login.jsx';
 
 import './homepage.css';
