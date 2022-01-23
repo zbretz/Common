@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useRef } from 'react';
 import Login from './Login.jsx';
-import { useAuth } from '../../contexts/AuthContext'
+import { useAuth } from '../../contexts/AuthContext';
 
 import './homepage.css';
 
@@ -10,7 +10,7 @@ const Homepage = () => {
   const username = useRef();
   const passwordRef = useRef();
 
-  const { signUp, currentUser, userSignOut, signIn } = useAuth()
+  const { signUp, currentUser, userSignOut, signIn } = useAuth();
 
   const [login, setLogin] = useState(false);
 
@@ -19,8 +19,8 @@ const Homepage = () => {
 
     // pass in username, password 
     signIn(username, pw);
-    console.log(username);
-    console.log(pw);
+    // console.log('username', username);
+    // console.log('password', pw);
   }
 
   // create sign in function using Lenora's auth function signUp
