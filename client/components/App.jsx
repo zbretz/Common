@@ -8,7 +8,7 @@ const App = () => {
     <AuthProvider>
       <h1>CommonApp</h1>
       <AuthTesting />
-      {/* <Homepage /> */}
+      <Homepage />
     </AuthProvider>
   )
 }
