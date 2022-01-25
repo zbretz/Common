@@ -1,0 +1,16 @@
+.user_details {
+  display: flex;
+  padding: 5%;
+}
+
+.profile_pic {
+  background-color: blue;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  padding-right: 2%;
+}
+
+.user_info {
+  padding-left: 3%;
+}

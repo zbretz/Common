@@ -29,9 +29,13 @@ const CreateProfile = () => {
           <Form.Label>LinkedIn Link:</Form.Label>
           <Form.Control type="linkedInLink" placeholder="Your LinkedIn Link" onChange={(e) => setLinkedIn(e.target.value)}/>
         </Form.Group>
+        <Form.Group className="mb-3" controlId="experience">
+          <Form.Label>Years of experience:</Form.Label>
+          <Form.Control type="number"/>
+        </Form.Group>
         <Form.Group className="mb-3" controlId="resume">
           <Form.Label>Upload Resume</Form.Label>  
-          <p>Work in Progress</p>
+          <Form.Control type="file" />
         </Form.Group>
         <Button variant="primary" type="submit">
           Submit

@@ -1,4 +1,7 @@
 {
   "name": "Johnny Appleseed",
-  "email": "johnny@gmail.com"
+  "email": "johnny@gmail.com",
+  "experience": 5,
+  "github": "github.com/JApple",
+  "linkedIn": "linkedIn.com/Johnny/Appleseed"
 }

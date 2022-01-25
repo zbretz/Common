@@ -22,6 +22,7 @@ const CreateAccountInfo = () => {
 
   return (
     <div>
+      <h3>Create Account:</h3>
       <Form>
         <Form.Group className="mb-3" controlId="username">
           <Form.Label>Username:</Form.Label>
