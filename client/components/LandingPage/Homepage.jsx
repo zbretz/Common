@@ -7,18 +7,18 @@ import './homepage.css';
 
 const Homepage = () => {
 
-  const username = useRef();
-  const passwordRef = useRef();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const { signUp, currentUser, userSignOut, signIn } = useAuth();
 
   const [login, setLogin] = useState(false);
 
-  const clickLogin = (username, pw) => {
+  const clickLogin = () => {
     setLogin(true);
 
     // pass in username, password 
-    signIn(username, pw);
+    // signIn(username, pw);
     // console.log('username', username);
     // console.log('password', pw);
   }
@@ -29,8 +29,8 @@ const Homepage = () => {
   return (
   <div className='home'>
     <h1 className='title'>Apply.io</h1>
-      {/* {login ? <Login /> : <></>} */}
-      <form>
+      {login ? <Login usernameFn={setUsername} passwordFn={setPassword}/> : <></>}
+      {/* <form>
         <label>
           Username:
           <input type="text" ref={username}></input>
@@ -39,9 +39,10 @@ const Homepage = () => {
           Password:
           <input type="text" ref={passwordRef}></input>
         </label>
-      </form>
+      </form> */}
       <div className='buttons'>
-        <button className='btn' onClick={() => clickLogin(username.current.value, passwordRef.current.value)}>Log In</button>
+        {/* <button className='btn' onClick={() => clickLogin(username.current.value, passwordRef.current.value)}>Log In</button> */}
+        <button className='btn' onClick={() => clickLogin()}>Log In</button>
         <button className='btn'>Sign Up</button>
       </div>
   </div>
