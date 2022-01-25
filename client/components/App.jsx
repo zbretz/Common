@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { AuthProvider } from '../contexts/AuthContext'
 import AuthTesting from './AuthTesting.jsx'
 import Homepage from './LandingPage/Homepage.jsx';
+import ScreeningInterview from './ScreeningInterviewPage/ScreeningInterview.jsx';
 
 const App = () => {
   return (
