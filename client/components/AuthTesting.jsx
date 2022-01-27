@@ -18,7 +18,7 @@ const AuthTesting = () => {
     signIn(emailRef.current.value, passwordRef.current.value)
     // console.log(emailRef.current.value + ' signed in.');
   }
-
+p
   const handleSignOut = (e) => {
     e.preventDefault();
     userSignOut()
