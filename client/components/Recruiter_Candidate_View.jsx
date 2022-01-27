@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 import styles from './styles/recruiterCandidateView.module.css'
 
 const data = {
-  tab: "candidate_profile",
+  tab: "React",
   interviewer_name: "Zachary Bretz",
   performance_summary: "As fast as thou shalt wane, so fast thou grow'st, In one of thine, from that which thou departest; And that fresh blood which youngly thou bestow'st, Thou mayst call thine when thou from youth convertest, Herein lives wisdom, beauty, and increase; Without this folly, age, and cold decay: If all were minded so, the times should cease And threescore year would make the world away. Let those whom nature hath not made for store, Harsh, featureless, and rude, barrenly perish:",
   video_file_path: 'video.mp4',
@@ -37,16 +37,16 @@ function ControlledTabs() {
       <Tab eventKey="home" title="Candidate Profile">
         <div>As fast as thou shalt wane, so fast thou grow'st, In one of thine, from that which thou departest; And that fresh blood which youngly thou bestow'st, Thou mayst call thine when thou from youth convertest, Herein lives wisdom, beauty, and increase; Without this folly, age, and cold decay: If all were minded so, the times should cease And threescore year would make the world away. Let those whom nature hath not made for store, Harsh, featureless, and rude, barrenly perish:</div>
       </Tab>
-      <Tab eventKey="react" title="React">
+      <Tab eventKey="react" title={data.tab}>
       <h2>Frontend Interview (React)</h2>
 
       {/* <Container> */}
-        <h5 style={{marginTop: "30px"}}  >Interviewer: {data.react.interviewer}</h5>
+        <h5 style={{marginTop: "30px"}}  >Interviewer: {data.interviewer_name}</h5>
       {/* </Container> */}
 
       <div>
         <h5  style={{marginTop: "30px"}}>Performance Summary</h5>
-        <div>As fast as thou shalt wane, so fast thou grow'st, In one of thine, from that which thou departest; And that fresh blood which youngly thou bestow'st, Thou mayst call thine when thou from youth convertest, Herein lives wisdom, beauty, and increase; Without this folly, age, and cold decay: If all were minded so, the times should cease And threescore year would make the world away. Let those whom nature hath not made for store, Harsh, featureless, and rude, barrenly perish:</div>
+        <div>{data.performance_summary}</div>
       </div>
 
       {/* <img src="./screenshot.png"/>
@@ -100,13 +100,6 @@ function ControlledTabs() {
         <div>As fast as thou shalt wane, so fast thou grow'st, In one of thine, from that which thou departest; And that fresh blood which youngly thou bestow'st, Thou mayst call thine when thou from youth convertest, Herein lives wisdom, beauty, and increase; Without this folly, age, and cold decay: If all were minded so, the times should cease And threescore year would make the world away. Let those whom nature hath not made for store, Harsh, featureless, and rude, barrenly perish:</div>      </Tab>
     </Tabs>
   );
-}
-
-let dummy = {
-
-  user: user
-  interviews: [react, behavioral]
-
 }
 
 const Recruiter_Candidate_View = () => {
