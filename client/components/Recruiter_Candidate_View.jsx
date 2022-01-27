@@ -13,19 +13,21 @@ const data = {
   evaluation: [
     {
     criterion: "Asked Qs when needed",
-    rating: "4"
+    rating: 4
     },{
       criterion: "Met Requirements",
-      rating: "3"
+      rating: 3
     },{
       criterion: "Understood prompt",
-      rating: "4"
+      rating: 4
     }
   ]
 }
 
 function ControlledTabs() {
   const [key, setKey] = useState('home');
+
+  console.log(data.evaluation.length)
 
   return (
     <Tabs
@@ -56,6 +58,7 @@ function ControlledTabs() {
 
       <h5 style={{marginTop: "30px"}} >Evaluation: </h5>
 
+
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -67,27 +70,26 @@ function ControlledTabs() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Asked Qs when needed</td>
-            <td><span style={{backgroundColor:"black", borderRadius:"50%", height:"30px", width:"30px", display:"block", margin:'auto'}}></span></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Met Requirements</td>
-            <td></td>
-            <td><span style={{backgroundColor:"black", borderRadius:"50%", height:"30px", width:"30px", display:"block", margin:'auto'}}></span></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Understood prompt</td>
-            <td><span style={{backgroundColor:"black", borderRadius:"50%", height:"30px", width:"30px", display:"block", margin:'auto'}}></span></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+            {/* <td>{Asked Qs when needed}</td> */}
+            {data.evaluation.map(thing => {
+              return(
+                <tr>
+
+                <td>{thing.criterion}</td>
+                {
+                [4,3,2,1].map(num=> {
+                  if(num === thing.rating){
+                    return <td><span style={{backgroundColor:"black", borderRadius:"50%", height:"30px", width:"30px", display:"block", margin:'auto'}}></span></td>
+                  } else {
+                    return <td></td>
+                  }
+                })
+              }
+                </tr>
+
+              )
+            })}
+
         </tbody>
       </Table>
 
