@@ -5,7 +5,24 @@ import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container'
 import styles from './styles/recruiterCandidateView.module.css'
 
-
+const data = {
+  tab: "candidate_profile",
+  interviewer_name: "Zachary Bretz",
+  performance_summary: "As fast as thou shalt wane, so fast thou grow'st, In one of thine, from that which thou departest; And that fresh blood which youngly thou bestow'st, Thou mayst call thine when thou from youth convertest, Herein lives wisdom, beauty, and increase; Without this folly, age, and cold decay: If all were minded so, the times should cease And threescore year would make the world away. Let those whom nature hath not made for store, Harsh, featureless, and rude, barrenly perish:",
+  video_file_path: 'video.mp4',
+  evaluation: [
+    {
+    criterion: "Asked Qs when needed",
+    rating: "4"
+    },{
+      criterion: "Met Requirements",
+      rating: "3"
+    },{
+      criterion: "Understood prompt",
+      rating: "4"
+    }
+  ]
+}
 
 function ControlledTabs() {
   const [key, setKey] = useState('home');
@@ -24,7 +41,7 @@ function ControlledTabs() {
       <h2>Frontend Interview (React)</h2>
 
       {/* <Container> */}
-        <h5 style={{marginTop: "30px"}}  >Interviewer: Zach Bretz</h5>
+        <h5 style={{marginTop: "30px"}}  >Interviewer: {data.react.interviewer}</h5>
       {/* </Container> */}
 
       <div>
@@ -85,7 +102,20 @@ function ControlledTabs() {
   );
 }
 
+let dummy = {
+
+  user: user
+  interviews: [react, behavioral]
+
+}
+
 const Recruiter_Candidate_View = () => {
+
+  // useEffect(()=>{
+  //   fakeAxios => data =>
+  //   setData(dummy)
+  // })
+
   return (
     <>
     <Container style={{width:"80%"}}
